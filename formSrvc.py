@@ -13,9 +13,9 @@ def postservice():
     target = request.form['target']
     client = request.form['client']
     category = request.form['category']
-    # priority = request.form['priority']
+    rank = request.form['rank']
 
-    return jsonify({'title' : title, 'description' : description, 'target' : target, 'client' : client, 'category' : category })
+    return jsonify({'title' : title, 'description' : description, 'target' : target, 'client' : client, 'category' : category, 'rank' : rank})
 
 if __name__ == '__main__':
     app.run(debug=True)
