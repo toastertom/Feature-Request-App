@@ -20,7 +20,7 @@ $(document).ready(function() {
         $('#form')[0].reset()
       }
       else{
-        console.log('fail');
+        console.log('Ajax Failed');
       }
     });
 
