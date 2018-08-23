@@ -1,6 +1,7 @@
 import os
 from datetime import datetime
 from flask import Flask, render_template, request, jsonify
+from sqlalchemy import desc
 from flask_sqlalchemy import SQLAlchemy
 from flask_marshmallow import Marshmallow
 # Sets a path to the current directory.
@@ -35,12 +36,14 @@ def postservice():
     # Runs the SQL INSERT statement which adds the data to the database.
     db.session.commit()
 
-    return jsonify({'title' : title, 'description' : description, 'target' : target, 'client' : client, 'category' : category, 'rank' : rank})
+    # return jsonify({'title' : title, 'description' : description, 'target' : target, 'client' : client, 'category' : category, 'rank' : rank})
 
 # Get Request
 @app.route('/getservice', methods=['GET'])
 def getservice():
-    all_requests = models.Request.query.all()
+    # all_requests = models.Request.query.all()
+    # all_requests = models.Request.query.order_by(desc(Request.rank))
+    all_requests = models.Request.sort_by_rank()
     results = models.request_schema.dump(all_requests)
     return jsonify(results.data)
 

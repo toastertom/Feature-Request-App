@@ -15,10 +15,10 @@ class Request(db.Model):
     date = db.Column(db.DateTime, default=datetime.utcnow)
 
 # This needs to be added to a different file.
-    # @staticmethod
-    # def sort_by_rank():
-    #     return Request.query.order_by(desc(Request.rank))
-    #
+    @staticmethod
+    def sort_by_rank():
+        return Request.query.order_by(Request.rank)
+
     # @staticmethod
     # def get_all_requests():
     #     return Request.query.all()

@@ -21,54 +21,70 @@
         <div class="header-container">
             <header class="wrapper clearfix">
                 <h1 class="title">Feature Request</h1>
-                <nav>
-                    <ul>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                        <li><a href="#">nav ul li a</a></li>
-                    </ul>
-                </nav>
             </header>
         </div>
 
         <div class="main-container">
             <div class="main wrapper clearfix">
-
+              <div class="form-container">
               <form id="form">
 
                 <input type="text" id="title" placeholder="Title" required>
-                <input type="text" id="description"  placeholder="Description" required>
+                <br>
+                <textarea type="text" id="description"  placeholder="Description" required></textarea>
+                <br>
+                <div class="form-selects">
                 <input type="date" id="target"  placeholder="Target Date" required>
                 <select id="client" required>
-                  <option selected="selected" disabled></option>
+                  <option selected="selected" value="none selected">Select Client</option>
                   <option value="client a">Client A</option>
                   <option value="client b">Client B</option>
                   <option value="client c">Client C</option>
                 </select>
-                <select id="category"  required>
-                  <option selected="selected" disabled></option>
+                <select id="category" placeholder="Category">
+                  <option selected="selected" value="none selected">Select Category</option>
                   <option value="UI">UI</option>
                   <option value="billing">Billing</option>
                   <option value="reporting">Reporting</option>
                   <option value="profiles">Profiles</option>
                 </select>
                 <select id="rank" required>
+                  <option value="3" selected="selected">Select Priortiy</option>
                   <option value="3">Low</option>
                   <option value="2">Medium</option>
                   <option value="1">High</option>
                 </select>
-
+                </div>
+                <br>
                 <button id="btn" type="submit">Submit</button>
 
               </form>
+              </div>
 
               <div class="requests">
+                <button id="refresh" >Refresh</button>
+                <table id="request">
 
+                  <tr>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Description</th>
+                    <th>Target Completion</th>
+                    <th>Client</th>
+                    <th>Category</th>
+                    <th>Priortiy</th>
+                    <th>Date Submited</th>
+                  </tr>
+                </table>
+                <!-- <table id="request">
+
+                </table> -->
               </div>
 
             </div> <!-- #main -->
         </div> <!-- #main-container -->
 
+          <script src="../static/js/getByRankSrvc.js"></script>
         <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.js"></script>
         <script>window.jQuery || document.write('<script src="../static/js/vendor/jquery-1.11.2.js"><\/script>')</script> -->

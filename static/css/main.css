@@ -63,6 +63,7 @@ body {
 .wrapper {
     width: 90%;
     margin: 0 5%;
+    text-align: center;
 }
 
 /* ===================
@@ -153,8 +154,58 @@ nav a:hover {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+.form-container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-bottom: 50px;
+}
 
+form {
+  width: 60%;
+}
 
+#title {
+  width: 100%;
+  margin-top: 10px;
+}
+
+textarea {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-selects {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+#target {
+  width: 25%;
+  } {
+
+}
+
+button {
+  margin-top: 20px;
+}
+
+table {
+  width: 100%;
+  border: 1px solid black;
+}
+
+th {
+    border: 1px solid black;
+    text-align: center;
+    padding: 5px;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+  padding: 5px;
+}
 
 
 
@@ -179,7 +230,7 @@ nav a:hover {
    ==================== */
 
     nav a {
-        float: left;
+        /* float: left; */
         width: 27%;
         margin: 0 1.7%;
         padding: 25px 2%;
@@ -225,7 +276,7 @@ nav a:hover {
    ============ */
 
     .title {
-        float: left;
+        /* float: left; */
     }
 
     nav {
