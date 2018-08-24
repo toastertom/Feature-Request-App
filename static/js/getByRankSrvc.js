@@ -46,6 +46,7 @@ $(document).ready(function() {
       });
     });
   });
+
   // Queries the database on page load.
     $.get('/getservice', function(data){
       console.log(data);
@@ -73,15 +74,13 @@ $(document).ready(function() {
           '<td>'+ priority + '</td>' +
           '<td>'+ value.date + '</td>' +
           '</tr>'
-
         );
       });
     });
 
-    // Auto Refreshe
-
+    // Auto Refresh
     $('#btn').click(function() {
-      // setInterval(function(){
+      // Adds a slight delay so the request isn't initialized before the data posts to the db...Not the best solution.
       setTimeout(function(){
       // Erases HTML already existing in the form.
       $('#request').html("");
@@ -129,10 +128,6 @@ $(document).ready(function() {
       });
     }, 100);
     });
-
-
-
-
 
 
 });

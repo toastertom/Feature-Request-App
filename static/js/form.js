@@ -16,15 +16,17 @@ $(document).ready(function() {
     })
     .done(function(response) {
       if (response) {
-        console.log(response);
+        // console.log(response);
         // Clears Form feilds on successful submital
         $('#form')[0].reset()
-      }
-      else{
+
+      }else{
+
         console.log('Ajax Failed');
+
       }
     });
-
+    // Prevents HTML from submitting the form again.
      event.preventDefault();
 
 
