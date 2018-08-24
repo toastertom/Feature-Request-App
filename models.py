@@ -2,7 +2,7 @@ from datetime import datetime
 
 from sqlalchemy import desc
 
-from formSrvc import db, ma
+from app import db, ma
 
 class Request(db.Model):
     id = db.Column(db.Integer, primary_key=True)
