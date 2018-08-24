@@ -13,7 +13,8 @@ $(document).ready(function() {
       },
       type : 'POST',
       url : '/postservice'
-    }).done(function(response) {
+    })
+    .done(function(response) {
       if (response) {
         console.log(response);
         // Clears Form feilds on successful submital

@@ -36,20 +36,17 @@ def postservice():
     # Runs the SQL INSERT statement which adds the data to the database.
     db.session.commit()
 
+    return 'post successful'
     # return jsonify({'title' : title, 'description' : description, 'target' : target, 'client' : client, 'category' : category, 'rank' : rank})
 
 # Get Request
 @app.route('/getservice', methods=['GET'])
 def getservice():
     # all_requests = models.Request.query.all()
-    # all_requests = models.Request.query.order_by(desc(Request.rank))
     all_requests = models.Request.sort_by_rank()
     results = models.request_schema.dump(all_requests)
     return jsonify(results.data)
 
-    # sort_by_rank_Request=models.Request.sort_by_rank()
-    # print(sort_by_rank_Request)
-    # return sort_by_rank_Request
 
 if __name__ == '__main__':
     app.run(debug=True)
