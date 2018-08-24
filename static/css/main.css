@@ -4,15 +4,17 @@ html {
     color: #222;
     font-size: 1em;
     line-height: 1.4;
+    height: 100%;
+    background: #F5F5F5;
 }
 
 ::-moz-selection {
-    background: #b3d4fc;
+    background: #F5F5F5;
     text-shadow: none;
 }
 
 ::selection {
-    background: #b3d4fc;
+    background: #F5F5F5;
     text-shadow: none;
 }
 
@@ -71,7 +73,7 @@ body {
    =================== */
 
 .header-container {
-    border-bottom: 20px solid #e44d26;
+    border-bottom: 20px solid #3700B3;
 }
 
 .footer-container,
@@ -82,7 +84,7 @@ body {
 .header-container,
 .footer-container,
 .main aside {
-    background: #f16529;
+    background: #6200EE;
 }
 
 .title {
@@ -124,9 +126,14 @@ nav a:hover {
 /* ==============
     MOBILE: Main
    ============== */
+.main-container {
+  background: #F5F5F5;
+  height: 100%;
+}
 
 .main {
     padding: 30px 0;
+
 }
 
 .main article h1 {
@@ -158,7 +165,6 @@ nav a:hover {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding-bottom: 50px;
 }
 
 form {
@@ -166,43 +172,78 @@ form {
 }
 
 #title {
-  width: 100%;
+  width: 99%;
+  height: 30px;
+  padding: 5px 0px 5px 5px;
   margin-top: 10px;
+  background: #fff;
+  border: none;
 }
 
 textarea {
-  width: 100%;
+  width: 99%;
+  height: 150px;
+  padding: 5px 0px 0px 5px;
   margin-top: 10px;
+  background: #fff;
+  border: none;
+}
+
+select {
+  height: 30px;
+  padding: 5px 0px 0px 5px;
+  background: #fff;
+  border: none;
 }
 
 .form-selects {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
 }
 #target {
+  height: 30px;
   width: 25%;
+  background: #fff;
+  border: none;
   } {
 
 }
 
 button {
-  margin-top: 20px;
+  background: #03DAC6;
+  color: #fff;
+  margin-top: 15px;
+  padding: 5px 40px;
+  border: none;
+  border-radius: 5px;
+
+}
+
+.requests {
+  height: 30px;
+  text-align: right;
+}
+
+#refresh {
+  padding: 5px;
+  margin-bottom: 10px;
 }
 
 table {
   width: 100%;
-  border: 1px solid black;
+  border: 1.5px solid #F5F5F5;
+  background: #fff;
 }
 
 th {
-    border: 1px solid black;
+    border: 1.5px solid #F5F5F5;
     text-align: center;
     padding: 5px;
 }
 
 td {
-  border: 1px solid black;
+  border: 1.5px solid #F5F5F5;
   text-align: center;
   padding: 5px;
 }
